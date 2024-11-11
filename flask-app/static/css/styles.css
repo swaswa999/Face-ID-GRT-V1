@@ -1,0 +1,127 @@
+/* Body and Background */
+body {
+    background: linear-gradient(145deg, #121212, #1c1c1c);
+    color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header img {
+    height: 50px; /* Adjust as needed */
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.admin-link {
+    font-size: 18px;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.admin-link:hover {
+    color: #fff;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Video Feed Styling */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#videoFeed {
+    width: 640px;
+    height: 360px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+#feedButton {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+#feedButton:hover {
+    background-color: #f0f0f0;
+}
+
+#feedButton:active {
+    background-color: #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #videoFeed {
+        width: 90%;
+        height: auto;
+    }
+    
+    header img {
+        height: 40px;
+    }
+    
+    .admin-link {
+        font-size: 16px;
+    }
+    
+    #feedButton {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* SIGNED OUT PAGE */
+
+#signedOutContainer{
+    background-color: #212121;
+    border-radius: 5%;
+    padding: 20px;
+
+}
+
+#checkMark{
+    height: auto;
+    width: 70%;
+}
+
+.checkText{
+    padding: 0%;
+    margin: 0%;
+}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signed IN</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    
+    <header >
+        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo"></a>
+        <a href="{{ url_for('admin') }}" class="admin-link">Admin</a>
+    </header>
+    <div class="container" id="signedOutContainer">
+        <img id="checkMark" src="{{ url_for('static', filename='img/checkMark.png') }}" alt="checkMark">
+        <h1>Signed In {{ nameCurrent }}!</h1>
+        <p class="checkText">Check In Time: {{ checkInTime }}</p>
+        <a href="{{ url_for('index') }}" id="feedButton" style="text-decoration: none;">Done</a>
+    </div>
+
+</body>
+</html>

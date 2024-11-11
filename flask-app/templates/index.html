@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Feed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo"></a>
+        <a href="{{ url_for('admin') }}" class="admin-link">Admin</a>
+    </header>
+    <div class="container">
+        <div class="video-container">
+            <img id="videoFeed" src="{{ url_for('video_feed') }}" alt="Live Video Feed">
+
+            <form action="{{ url_for('capture_frame') }}" method="post">
+                <button type="submit" id="feedButton">Check In/Out</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
