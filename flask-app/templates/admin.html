@@ -5,13 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: None }
+    </style>
 </head>
 <body>
     <header>
         <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo"></a>
     </header>
     <div class="container">
-      
+        <h1>CSV Data Overview</h1>
+        <table>
+            <thead>
+                <tr>
+                    {% for col in header %}
+                    <th>{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    {% for cell in row %}
+                    <td>{{ cell }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

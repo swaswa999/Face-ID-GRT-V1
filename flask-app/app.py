@@ -37,7 +37,14 @@ def index():
 # Admin page route
 @app.route("/admin")
 def admin():
-    return render_template("admin.html")
+    data = []
+
+    with open("flask-app/data/history/timesheet.csv", newline="") as csvfile:
+        reader = csv.reader(csvfile)
+        header = next(reader)
+        data = [row for row in reader]
+
+    return render_template("admin.html", header=header, data=data)
 
 
 # Function to stream video feed from the camera
